@@ -6,14 +6,14 @@
  * Time: 16:55
  */
 
-namespace Tools;
+
 
 
 class Querie
 {
-    private $dsn = "mysql:dbname=esaywedding;host=localhost;charset=utf8";
-    private $user = "christopher";
-    private $password = "talen";
+    private $dsn = "mysql:dbname=easywedding;host=localhost;charset=utf8";
+    private $user = "root";
+    private $password = "";
     private $db;
 
     public function __construct()
@@ -28,6 +28,9 @@ class Querie
     }
     public function selectMethod($sql)
     {
+        $result = $this->db->prepare($sql);
+        $result->execute();
+        return $result->fetchAll();
 
     }
 
