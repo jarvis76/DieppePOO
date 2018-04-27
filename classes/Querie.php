@@ -28,9 +28,14 @@ class Querie
     }
     public function selectMethod($sql)
     {
-        $result = $this->db->prepare($sql);
-        $result->execute();
-        return $result->fetchAll();
+        if (strlen($sql) > 0 || !empty($sql)){
+            $result = $this->db->prepare($sql);
+            $result->execute();
+            return $result->fetchAll();
+        }
+        else {
+            return false;
+        }
 
     }
 
