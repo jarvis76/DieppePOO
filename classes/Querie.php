@@ -9,6 +9,7 @@
 
 
 
+
 class Querie
 {
     private $dsn = "mysql:dbname=easywedding;host=localhost;charset=utf8";
@@ -44,3 +45,5 @@ class Querie
         unset($this->db);
     }
 }
+
+
