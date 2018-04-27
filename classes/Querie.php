@@ -28,5 +28,11 @@ class Querie
     }
     public function selectMethod($sql)
     {
+
+    }
+
+    public function __destruct()
+    {
+        unset($this->db);
     }
 }
