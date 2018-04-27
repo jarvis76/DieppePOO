@@ -1,0 +1,23 @@
+h1{
+    text-align: center;
+    background-color: mediumblue;
+    color: white;
+}
+
+li{
+
+    display: flex;
+    text-decoration: none;
+
+}
+
+.toto{
+    center;
+}
+
+body{
+
+    pading: 0px;
+    margin: 0px;
+
+}
