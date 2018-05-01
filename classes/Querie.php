@@ -7,7 +7,7 @@
  */
 
 
-
+/*connection base de données*/
 
 
 class Querie
