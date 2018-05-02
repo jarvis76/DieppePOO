@@ -15,7 +15,7 @@ class Form
         $form = "<form method='post' action='$actionURI'>";
         foreach($conf as $content) {
             $form .= "<div>";
-            if (isset($content['name'])) {
+            if (isset($content['name']) && $content['type'] != "hidden") {
                 $form .= "<label for='" . $content['name'] . "'>";
                 $form .= ucfirst($content['name']);
                 $form .= "&nbsp;: ";
@@ -36,5 +36,13 @@ class Form
     }
     public function frmCheck()
     {
+        $conf = parse_ini_file($this->path . $this->file . ".ini", true);
+
+        $hiddenFieldName = array_key_exists('itemHiddenField', $conf) ? $conf['itemHiddenField']['name'] : false ;
+
+        var_dump($hiddenFieldName);
+
+
+
     }
 }
