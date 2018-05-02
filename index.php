@@ -1,4 +1,4 @@
-<h1> Bienvenu sur votre reservation de mariage </h1>
+<h1> Bienvenue sur votre reservation de mariage </h1>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -42,7 +42,7 @@ else {
 }*/
 
 $test = new Form(PATHCONF, "registration");
-$test->frmGenerate();
+echo $test->frmGenerate("toto.com");
 
 ?>
 
