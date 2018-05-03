@@ -6,3 +6,13 @@
  * Time: 14:12
  */
 
+
+
+
+
+$test = new Form(PATHCONF, "registration");
+echo $test->frmCheck();
+
+
+
+
