@@ -40,9 +40,15 @@ class Form
 
         $hiddenFieldName = array_key_exists('itemHiddenField', $conf) ? $conf['itemHiddenField']['name'] : false ;
 
-        var_dump($hiddenFieldName);
+        //var_dump($hiddenFieldName);
 
+        if ($_POST[$hiddenFieldName]) {
 
+        }
+
+        else {
+            return
+        }
 
     }
 }
