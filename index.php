@@ -42,7 +42,8 @@ else {
 }*/
 
 $test = new Form(PATHCONF, "registration");
-echo $test->frmGenerate("toto.com");
+echo $test->frmCheck();
+
 
 ?>
 
