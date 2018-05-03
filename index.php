@@ -26,23 +26,9 @@
 define("PATHCONF", "./conf/");
 date_default_timezone_set("Europe/Paris");
 require_once "./functions/classAutoLoader.php";
-spl_autoload_register('classAutoloader');
-
-
-
-//$toto = new Querie();
-
-/*Debug::dump($toto);
-die();
-if ($result = $toto->selectMethod("SELECT * FROM t_admin")) {
-    Debug::dump($result);
-}
-else {
-    echo "erreur";
-}*/
-
+spl_autoload_register('classAutoLoader');
 $test = new Form(PATHCONF, "registration");
-echo $test->frmCheck();
+echo $test->frmGenerate("form.php");
 
 
 ?>

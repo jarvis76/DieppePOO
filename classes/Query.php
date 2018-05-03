@@ -10,13 +10,12 @@
 /*connection base de données*/
 
 
-class Querie
+class Query
 {
     private $dsn = "mysql:dbname=easywedding;host=localhost;charset=utf8";
     private $user = "root";
     private $password = "";
     private $db;
-
     public function __construct()
     {
         try {
@@ -29,7 +28,7 @@ class Querie
     }
     public function selectMethod($sql)
     {
-        if (strlen($sql) > 0 || !empty($sql)){
+        if (strlen($sql) > 0 || !empty($sql)) {
             $result = $this->db->prepare($sql);
             $result->execute();
             return $result->fetchAll();
@@ -37,12 +36,19 @@ class Querie
         else {
             return false;
         }
-
     }
-
-    public function __destruct()
+    public function insertMethod()
     {
-        unset($this->db);
+       if (strl(sql) > 0 || !empty($sql)){
+
+           $result= $this->db->prepare($sql);
+               $result = execute();
+
+       }
+
+       else {
+           return false;
+       }
     }
 }
 
