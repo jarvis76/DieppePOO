@@ -1,6 +1,7 @@
 <?php
 
 /* ecriture lecture du log*/
+
 class Log
 {
     public static function logWrite($data)
