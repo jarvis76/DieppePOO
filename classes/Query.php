@@ -10,7 +10,7 @@
 /*connection base de données*/
 
 
-class Query
+class Querie
 {
     private $dsn = "mysql:dbname=easywedding;host=localhost;charset=utf8";
     private $user = "root";
@@ -37,18 +37,9 @@ class Query
             return false;
         }
     }
-    public function insertMethod()
+    public function __destruct()
     {
-       if (strl(sql) > 0 || !empty($sql)){
-
-           $result= $this->db->prepare($sql);
-               $result = execute();
-
-       }
-
-       else {
-           return false;
-       }
+        unset($this->db);
     }
 }
 
