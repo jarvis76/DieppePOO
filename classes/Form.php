@@ -58,19 +58,6 @@ class Form
                 echo $message;
             }
             else {
-                $nom = $_POST['nom'];
-                $prenom = $_POST['prenom'];
-                $mail = $_POST['mail'];
-                $adminPassword = hash ('sha256', $_POST['$mdp']);
-
-                $sql = "INSERT INTO t_admin (ADMFIRSTNAME, ADMNAME, ADMMAIL, ADMPASSWORD)
-                        VALUES ('$nom', '$prenom', '$mail', '$adminPassword')";
-
-               $test = new Query();
-               if($test->insertMethod($sql))
-                   echo "ok";
-               else
-                   echo "NOK";
             }
         }
         else {
